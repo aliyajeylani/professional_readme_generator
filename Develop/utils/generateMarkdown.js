@@ -9,7 +9,10 @@ function renderLicenseBadge(license) {
   if (license == "APACHE 2.0") {
     return `![License: APACHE 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`
   }
+  if (license == "GPL v3") {
 
+    return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
+  }
   if (license == "BSD 3") {
 
     return `![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)`
@@ -31,7 +34,10 @@ function renderLicenseLink(license) {
   if (license == "APACHE 2.0") {
     return `(https://opensource.org/licenses/Apache-2.0);`
   }
+  if (license == "GPL v3") {
 
+    return `(https://www.gnu.org/licenses/gpl-3.0);`
+  }
   if (license == "BSD 3") {
 
     return `(https://opensource.org/licenses/BSD-3-Clause);`
@@ -45,6 +51,7 @@ function renderLicenseLink(license) {
 }
 
 
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -52,13 +59,11 @@ function renderLicenseSection(license) {
   if (license == "None") {
     return "";
   } else {
-    return `### License: Copyright:`
+    return `This project is licensed under: ${license}`
   }
 
 
 }
-
-
 
 
 
@@ -70,31 +75,36 @@ function generateMarkdown(data) {
 ${renderLicenseBadge(data.license)}
 
 ${data.description}
-## Table of Contents:
-* [Installation] (#installation)
-* [Usage] (#usage)
-* [Credits] (#credits)
-* [Tests] (#tests)
-* [License] (#license)
-* [Questions] (#questions)
 
-In order to install the necessary dependencies, open the console and run the following:
-\`\'\`${data.installation}\`\`\`
+## Table of Contents
+1. [Installation] (_#installation_)
+2. [Usage] (#usage)
+3. [Credits] (#credits)
+4. [Tests] (#tests)
+5. [License] (#license)
+6. [Questions] (#questions)
 
-### Usage:
+### Installation
+In order to install the necessary dependencies, open the console and run the following
+\`\`\`${data.installation}\`\`\`
+
+### Usage
 ${data.usage}
 
-### Credits:
+### Credits
 ${data.credits}
 
-### Tests:
+### Tests
 In order to test open the console and run the following:
-\`\'\`${data.test}\`\`\`
+\`\`\`${data.test}\`\`\`
+
+### License
 
 ${renderLicenseSection(data.license)}
 
-### Questions:
-If you have any questions contact me on [GitHub] (https://github.com/${data.username})  or at ${data.email})`
+
+### Questions
+If you have any questions contact me on [GitHub] (https://github.com/${data.username}) or contact Aliya jeylani at ${data.email})`
 
 }
 
