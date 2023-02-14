@@ -1,35 +1,33 @@
-# project 9
+# ReadMe
 
-![License: APACHE 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+  ![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
 
-test
+  This project generates a readme markdown file using node inquier.
 
-## Table of Contents
-[Installation] (_#installation_)
-[Usage] (#usage)
-[Credits] (#credits)
-[Tests] (#tests)
-[License] (#license)
-[Questions] (#questions)
+ ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Tests](#tests)
+  * [License](#license)
+  * [Questions](#questions)
 
-### Installation
-In order to install the necessary dependencies, open the console and run the following
-```test```
+  ### Installation
+  nodeJs needs to installed on your computer. You will also need to have a package.json and package-lock.json installed to make application work.
 
-### Usage
-test
+  ### Usage
+  You will be prompted to answer questions and answer will be displayed in the readme file.
 
-### Credits
-tes
+  ### Credits
+  There are no contributions at this time.
 
-### Tests
-In order to test open the console and run the following:
-```test```
+  ### Tests
+  In order to test open the terminal and run node index.js.
 
-### License
+  ### License
 
-This project is licensed under: APACHE 2.0
+  This project is licensed under: BSD 3
 
 
-### Questions
-If you have any questions contact me on [GitHub] (https://github.com/aliyajeylani) or contact Aliya jeylani at aliya.jeylani24@gmail.com)
+  ### Questions
+  If you have any questions contact me on [GitHub] (https://github.com/aliyajeylani) or contact Aliya jeylani at aliya.jeylani24@gmail.com)

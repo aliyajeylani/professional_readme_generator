@@ -72,39 +72,37 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge(data.license)}
 
-${data.description}
+  ${data.description}
 
-## Table of Contents
-1. [Installation] (_#installation_)
-2. [Usage] (#usage)
-3. [Credits] (#credits)
-4. [Tests] (#tests)
-5. [License] (#license)
-6. [Questions] (#questions)
+ ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Tests](#tests)
+  * [License](#license)
+  * [Questions](#questions)
 
-### Installation
-In order to install the necessary dependencies, open the console and run the following
-\`\`\`${data.installation}\`\`\`
+  ### Installation
+  ${data.installation}
 
-### Usage
-${data.usage}
+  ### Usage
+  ${data.usage}
 
-### Credits
-${data.credits}
+  ### Credits
+  ${data.credits}
 
-### Tests
-In order to test open the console and run the following:
-\`\`\`${data.test}\`\`\`
+  ### Tests
+  ${data.test}
 
-### License
+  ### License
 
-${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}
 
 
-### Questions
-If you have any questions contact me on [GitHub] (https://github.com/${data.username}) or contact Aliya jeylani at ${data.email})`
+  ### Questions
+  If you have any questions contact me on [GitHub] (https://github.com/${data.username}) or contact Aliya jeylani at ${data.email})`
 
 }
 
