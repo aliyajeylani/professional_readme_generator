@@ -47,7 +47,16 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) { }
+function renderLicenseSection(license) {
+
+  if (license == "None") {
+    return "";
+  } else {
+    return `### License: Copyright:`
+  }
+
+
+}
 
 
 
@@ -57,34 +66,37 @@ function renderLicenseSection(license) { }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
- 
-          ${data.desscription}
-          ## Table of Contents:
-          * [Installation] (#installation)
-          * [Usage] (#usage)
-          * [Credits] (#credits)
-          * [Tests] (#tests)
-          * [License] (#license)
-          * [Questions] (#questions)
-          In order to install the necessary dependencies, open the console and run the following:
-          \`\'\`${data.installation}\`\`\`
-          ### Usage:
-          ${data.usage}
-          ### Credits:
-          ${data.credits}
-          ### Tests:
-          In order to test open the console and run the following:
-          \`\'\`${data.test}\`\`\`
-          ### License:
-          ${data.license}
-          ### Questions:
-          If you have any questions contact me on [GitHub] (https://github.com/${data.username})`
+
+${renderLicenseBadge(data.license)}
+
+${data.description}
+## Table of Contents:
+* [Installation] (#installation)
+* [Usage] (#usage)
+* [Credits] (#credits)
+* [Tests] (#tests)
+* [License] (#license)
+* [Questions] (#questions)
+
+In order to install the necessary dependencies, open the console and run the following:
+\`\'\`${data.installation}\`\`\`
+
+### Usage:
+${data.usage}
+
+### Credits:
+${data.credits}
+
+### Tests:
+In order to test open the console and run the following:
+\`\'\`${data.test}\`\`\`
+
+${renderLicenseSection(data.license)}
+
+### Questions:
+If you have any questions contact me on [GitHub] (https://github.com/${data.username})  or at ${data.email})`
 
 }
-
-
-
-
 
 
 
